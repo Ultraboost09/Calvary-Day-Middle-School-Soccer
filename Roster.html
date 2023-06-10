@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" title="Roster">
+
+<head></head>
+
+<style>
+.menu{
+width:100%;
+background:gold;
+overflow:auto;
+}
+.menu ul{
+margin:100;
+padding:10;
+list-style:none;
+line-height:60px;
+}
+.menu li{
+float:left;
+}
+.menu ul li a{
+background:gold;
+text-decoration:none;
+width:130px;
+display:block;
+text-align:center;
+color:purple
+font-size:20px;
+font-family:sans-serif;
+letter-spacing:0,Spx;
+}
+.menu li a:hover{
+color:white;
+opacity:100;
+}
+.input[type=text]{
+padding:7px;
+border:none;
+font-size:16px;
+font-family:sans-serif;
+}
+</style
+</head>
+<body>
+<nav class="menu">
+<ul>
+ <li><a href="Index.html">HOME</a></li>
+ <li><a href="About.html">ABOUT</a><li>
+ <li><a href="Roster.html">ROSTER</a></li>
+ <li><a href="Champs.html">SCHEDULE</a></li>
+</ul>
+</nav>
+</body>
+
+</html>
+
+
+
+
+
+
+<style>{
+    margin: 00;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+body {
+    min-height: 100vh;
+    background:purple;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main.table {
+    width: 82vw;
+    height: 90vh;
+    background-color: #fff5;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+
+    overflow: hidden;
+
+margin-left: auto; margin-right: auto; 
+
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table__header .input-group {
+    width: 35%;
+    height: 100%;
+    background-color: #fff5;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+.table__header .input-group:hover {
+    width: 45%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.table__header .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+
+    margin: .8rem auto;
+    border-radius: .6rem;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+}
+
+td img {
+    width: 75px;
+    height: 75px;
+    margin-right: .5rem;
+    border-radius: 50%;
+
+    vertical-align: middle;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+
+.status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.status.delivered {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.shipped {
+    background-color: #6fcaea;
+}
+
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
+
+
+
+
+thead th:hover {
+    color: #6c00bd;
+}
+
+
+
+
+
+thead th.active,tbody td.active {
+    color: #6c00bd;
+}
+
+.export__file {
+    position: relative;
+}
+
+.export__file .export__file-btn {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: #fff6 url(images/export.png) center / 80% no-repeat;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-btn:hover { 
+    background-color: #fff;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.export__file input {
+    display: none;
+}
+
+.export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    
+    width: 12rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(.8);
+    transform-origin: top right;
+    
+    box-shadow: 0 .2rem .5rem #0004;
+    
+    transition: .2s;
+}
+
+.export__file input:checked + .export__file-options {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100;
+}
+
+.export__file .export__file-options label{
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: #f2f2f2;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-options label:first-of-type{
+    padding: 1rem 0;
+    background-color: #86e49d !important;
+}
+
+.export__file .export__file-options label:hover{
+    transform: scale(1.05);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.export__file .export__file-options img{
+    width: 2rem;
+    height: auto;
+}
+
+
+h1 {
+  color: Gold;
+  margin: 20px 10px 0px;
+  padding: 100px 100px 100px 450px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+    <main class="table">
+        <section class="table__header">
+            
+<h1> Roster</h1>
+            
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Player </th>
+                        <th> Player Image </th>
+                        <th> Number </th>
+                        <th> Position </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> M.Bacon </td>
+                        <td> <img src="/Images\Soccer Images/20230406_182223.jpg"</td>
+                        <td> 6 </td>
+                        <td> Midfielder </td>
+                    </tr>
+                        <td> W.Bass </td>
+                        <td><img src="/Images\Soccer Images/20230406_191007.jpg" </td>
+                        <td> 2 </td>
+                        <td> Midfielder </td>
+                       
+                    </tr>
+                    <tr>
+                        <td> K.Batts </td>
+                        <td><img src="/Images\Soccer Images/20230307_175417.2.jpg" </td>
+                        <td> 4 </td>
+                        <td> Forward </td>
+                    </tr>
+                    <tr>
+                        <td> C.Biggins	</td>
+                        <td><img src="/Images\Soccer Images/20230323_181124.jpg" </td>
+                        <td> 22 </td>
+                        <td> Forward </td>
+                    </tr>
+                    <tr>
+                        <td> A.Burgess	</td>
+                        <td><img src="/Images\Soccer Images/20230406_185829.jpg" </td>
+                        <td> 21 </td>
+                        <td> Defense </td>
+                    </tr>
+                    <tr>
+                        <td> J.Hannah	</td>
+                        <td><img src="/Images\Soccer Images/20230406_184203.jpg" </td>
+                        <td> 18 </td>
+                        <td> Forward </td>
+                    </tr>
+                    <tr>
+                        <td> C.Holland	</td>
+                        <td><img src="/Images\Soccer Images/20230406_182229.jpg" </td>
+                        <td> 19 </td>
+                        <td> Defense </td>
+                    </tr>
+                    <tr>
+                        <td> M.Holland</td>
+                        <td><img src="/Images\Soccer Images/20230307_175417.jpg" </td>
+                        <td> 12 </td>
+                        <td> Forward </td>
+                    </tr>
+                    <tr>
+                        <td> J.Jackson	</td>
+                        <td><img src="/Images\Soccer Images/20230406_183947.jpg" </td>
+                        <td> 14 </td>
+                        <td> Goalie </td>
+                    </tr>
+                    <tr>
+                        <td> R.Levin	</td>
+                        <td><img src="/Images\Soccer Images/20230406_182218.jpg" </td>
+                        <td> 11 </td>
+                        <td> Midfielder </td>
+                   </tr>
+                   <tr>
+                        <td> M.Mehl</td>
+                        <td><img src="/Images\Soccer Images/20230406_183816.jpg" </td>
+                        <td> 16 </td>
+                        <td> Defense </td>
+                   </tr>
+                   <tr>
+                        <td> R.Newsome	</td>
+                        <td><img src="/Images\Soccer Images/20230406_183614.jpg" </td>
+                        <td> 8 </td>
+                        <td> Midfielder </td>
+                   </tr>
+                   <tr>
+                        <td> A.Patel	</td>
+                        <td><img src="/Images\Soccer Images/20230307_181119.jpg" </td>
+                        <td> 25 </td>
+                        <td> Defense </td>
+                   </tr>
+                   <tr>
+                        <td> B.Rawlings	</td>
+                        <td><img src="/Images\Soccer Images/20230406_183829.jpg" </td>
+                        <td> 5 </td>
+                        <td> Midfielder </td>
+                   </tr>
+                   <tr>
+                        <td> C.Salzer</td>
+                        <td><img src="/Images\Soccer Images/20230404_185311.jpg" </td>
+                        <td> 13 </td>
+                        <td> Forward </td>
+                   </tr>
+                   <tr>
+                        <td> R.Schaffer</td>
+                        <td><img src="/Images\Soccer Images/20230309_171620.jpg" </td>
+                        <td> 20 </td>
+                        <td> Midfielder </td>
+                   </tr>
+                   <tr>
+                        <td> D.Sheldon</td>
+                        <td><img src="/Images\Soccer Images/20230406_185730.jpg" </td>
+                        <td> 7 </td>
+                        <td> Forward </td>
+                   </tr>
+                   <tr>
+                        <td> J.Sheldon</td>
+                        <td><img src="/Images\Soccer Images/20230406_192206.jpg" </td>
+                        <td> 10 </td>
+                        <td> Midfielder </td>
+                   </tr>
+                   <tr>
+                        <td> O.Whelan </td>
+                        <td><img src="/Images\Soccer Images/20230406_181625.jpg" </td>
+                        <td> 23 </td>
+                        <td> Goalie </td>
+                   </tr>
+                   <tr>
+                        <td> S.Williams </td>
+                        <td><img src="/Images\Soccer Images/20230309_171615.jpg" </td>
+                        <td> 26 </td>
+                        <td> Defense </td>
+                   </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
